@@ -1,3 +1,4 @@
+using StockLedge.Api.ExceptionHandling;
 using StockLedge.Data.DiConfig;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,18 @@ builder.Services.DbContextDiConfig(builder.Configuration);
 builder.Services.AddRepositoriesDiConfig();
 
 builder.Services.AddControllers();
+
+builder.Services.AddProblemDetails(options =>
+{
+	options.CustomizeProblemDetails = context =>
+	{
+		context.ProblemDetails.Instance = context.HttpContext.Request.Path;
+	};
+});
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
