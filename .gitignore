@@ -55,3 +55,8 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs
+/src/StockLedge.Api/.vs/StockLedge.Api.slnx
+# Visual Studio user-specific files
+*.csproj.user
+*.suo

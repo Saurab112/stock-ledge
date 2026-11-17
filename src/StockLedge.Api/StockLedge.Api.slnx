@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../StockLedge.Application/StockLedge.Application.csproj" />
+  <Project Path="../StockLedge.Data/StockLedge.Data.csproj" />
+  <Project Path="../StockLedge.Domain/StockLedge.Domain.csproj" />
+  <Project Path="StockLedge.Api.csproj" />
+</Solution>
