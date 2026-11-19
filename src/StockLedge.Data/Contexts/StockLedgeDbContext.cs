@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using StockLedge.Domain.Uoms;
 
 namespace StockLedge.Data.Contexts
 {
@@ -12,7 +10,8 @@ namespace StockLedge.Data.Contexts
 		{
 		}
 
-		//db sets here
+		public DbSet<UnitOfMeasureGroupEntity> UomGroups => Set<UnitOfMeasureGroupEntity>();
+		public DbSet<UnitOfMeasureEntity> UnitsOfMeasure => Set<UnitOfMeasureEntity>();
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
