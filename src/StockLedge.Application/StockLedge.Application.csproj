@@ -10,4 +10,8 @@
     <ProjectReference Include="..\StockLedge.Domain\StockLedge.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\UnitsOfMeasure\DTOs\" />
+  </ItemGroup>
+
 </Project>
